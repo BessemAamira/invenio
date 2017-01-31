@@ -98,7 +98,7 @@ def index(req, c=CFG_SITE_NAME, ln=CFG_SITE_LANG, order="", doctype="", deletedI
                 req=req,
                 navmenuid='yourapprovals')
 
-def __isReferee(req, doctype="", categ="*"):
+def __isReferee(req, doctype="", categ=""):
     (auth_code, auth_message) = acc_authorize_action(req, "referee", doctype=doctype, categ=categ)
     if auth_code == 0:
         return 1
